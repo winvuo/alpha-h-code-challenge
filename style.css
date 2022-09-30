@@ -246,32 +246,55 @@ button {
 }
 
 .product-categories-container {
-  display: grid;
-  grid-template-columns: 10rem 10rem 10rem;
-  font-family: "Morion";
-  color: #373737;
+  display: flex;
+  justify-content: center;
+  align-content: center;
+  width: 100%;
+  margin: 3.125em 5em;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 2em;
+}
+
+.product-categories-container img {
+  width: 30em;
 }
 
 .product-categories-container h2 {
   font-size: 1.5em;
+  padding-top: 1.25em;
+  font-family: "Morion -Light";
+  line-height: 1.75em;
+  color: #373737;
 }
 
 .product-categories-container p {
   font-size: 1em;
-  font-family: "Aktiv Grotesk";
-  font-weight: lighter;
+  font-family: "Aktiv Grotesk -Light";
+  color: #373737;
+  padding-top: 1em;
+  padding-bottom: 1.375em;
 }
 
 .product-categories-container a {
-  font-family: "Aktiv Grotesk";
-  font-weight: bold;
+  font-family: "Aktiv Grotesk -Medium";
+  font-size: 0.875em;
   color: #373737;
   text-decoration: none;
-  padding-bottom: 0.875em;
+  padding-bottom: 0.5em;
   border-bottom: 0.2em solid #373737;
 }
 
 .product-categories-container a:hover {
   color: #bb8934;
   border-bottom: 0.2em solid #bb8934;
+}
+
+@media (max-width: 768px) {
+  .hero-banner-header img {
+    content: url(assets/images/banner-image__mobile.png);
+    width: 100%;
+  }
+}
+
+@media (min-width: 769px) and (max-width: 1250px) {
 }
