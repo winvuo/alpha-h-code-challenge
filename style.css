@@ -45,19 +45,12 @@
   font: inherit;
 }
 
-/* -- Remove list styles on ul, ol elements with a list role, which suggests default styling will be removed */
-ul[role="list"],
-ol[role="list"] {
-  list-style: none;
-}
-
 /* -- Set core root defaults */
 html:focus-within {
   scroll-behavior: smooth;
 }
 
 /* -- Set core body defaults */
-
 html,
 body {
   height: 100%;
@@ -105,6 +98,14 @@ select {
   }
 }
 
+.visually-hidden {
+  position: absolute;
+  left: -10000px;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+}
+
 /* HEADER: announcement bar   */
 .announcement-bar-header {
   display: flex;
@@ -127,6 +128,10 @@ select {
 }
 
 /* HEADER: navigation bar */
+#navigation-logo {
+  max-height: 1.8125em;
+}
+
 .primary-navigation-container {
   display: flex;
   align-items: center;
@@ -145,6 +150,7 @@ select {
 .nav-list {
   display: flex;
   gap: 1.5em;
+  list-style: none;
 }
 
 .nav-list a {
@@ -152,8 +158,8 @@ select {
   font-size: 1em;
   line-height: 1.1875em;
   font-family: "Aktiv Grotesk -Regular";
-  font-weight: lighter;
   color: #373737;
+  text-align: right;
 }
 
 .nav-list a:hover {
@@ -162,10 +168,6 @@ select {
 
 .nav-list li:nth-child(6) {
   padding-right: 4em;
-}
-
-#navigation-logo {
-  min-width: 10vw;
 }
 
 .quick-link-icon:hover {
@@ -192,7 +194,43 @@ select {
   text-align: left;
 }
 
-button {
+.pre-heading-text {
+  font-family: "Aktiv Grotesk -Bold";
+  font-size: 0.875em;
+  letter-spacing: 0.15em;
+  color: #373737;
+  line-height: 1em;
+  padding-bottom: 1.5em;
+}
+
+.heading-text {
+  font-family: "Morion -UltraLight";
+  font-size: 3.125em;
+  letter-spacing: -0.003125em;
+  color: white;
+}
+
+.heading-text span {
+  color: #373737;
+}
+
+.heading-text:nth-child(3) {
+  margin-top: -0.3em;
+  padding-bottom: 0.4em;
+}
+
+.heading-text:nth-child(4) {
+  padding-bottom: 0.4em;
+}
+
+.sub-heading-text {
+  font-family: "Aktiv Grotesk -Light";
+  font-size: 1em;
+  line-height: 1.5em;
+  color: #ffffff;
+}
+
+#hero-banner-shop-now {
   width: 18.1875rem;
   height: 3.75em;
   border: none;
@@ -202,41 +240,7 @@ button {
   font-size: 1em;
   color: white;
   line-height: 1.3125em;
-}
-
-.on-sale-now {
-  font-family: "Aktiv Grotesk -Bold";
-  font-weight: bold;
-  font-size: 0.875em;
-  letter-spacing: 0.15em;
-  color: #373737;
-  line-height: 1em;
-}
-
-.header-text {
-  font-family: "Morion -UltraLight";
-  font-size: 3.125em;
-  letter-spacing: -0.003125em;
-  color: white;
-}
-
-.header-text span {
-  color: #373737;
-}
-
-.subheading-text {
-  font-family: "Aktiv Grotesk -Light";
-  font-size: 1em;
-  line-height: 1.5em;
-  color: #ffffff;
-}
-
-.hero-banner-text:first-child p {
-  padding-bottom: 1.5em;
-}
-
-.hero-banner-text p:nth-child(2) {
-  padding-bottom: 1.5rem;
+  margin-top: 1.5em;
 }
 
 /* MAIN: product category sections */
@@ -246,22 +250,24 @@ button {
 }
 
 .product-categories-container {
-  display: flex;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
   justify-content: center;
   align-content: center;
   width: 100%;
   margin: 3.125em 5em;
-  grid-template-columns: 1fr 1fr 1fr;
   gap: 2em;
 }
 
 .product-categories-container img {
-  width: 30em;
+  width: 35em;
+  /* width: 23.3125em;
+  object-fit: contain; */
 }
 
-.product-categories-container h2 {
+.product-categories-container h3 {
   font-size: 1.5em;
-  padding-top: 1.25em;
+  padding-top: 1em;
   font-family: "Morion -Light";
   line-height: 1.75em;
   color: #373737;
@@ -271,8 +277,8 @@ button {
   font-size: 1em;
   font-family: "Aktiv Grotesk -Light";
   color: #373737;
-  padding-top: 1em;
-  padding-bottom: 1.375em;
+  padding-top: 0.6em;
+  padding-bottom: 3em;
 }
 
 .product-categories-container a {
