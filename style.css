@@ -261,13 +261,10 @@ select {
 
 .product-categories-container img {
   width: 35em;
-  /* width: 23.3125em;
-  object-fit: contain; */
 }
 
 .product-categories-container h3 {
-  font-size: 1.5em;
-  padding-top: 1em;
+  font-size: 1.55em;
   font-family: "Morion -Light";
   line-height: 1.75em;
   color: #373737;
@@ -278,7 +275,7 @@ select {
   font-family: "Aktiv Grotesk -Light";
   color: #373737;
   padding-top: 0.6em;
-  padding-bottom: 3em;
+  padding-bottom: 1.2em;
 }
 
 .product-categories-container a {
