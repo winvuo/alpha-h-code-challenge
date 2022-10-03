@@ -226,6 +226,7 @@ svg {
   color: white;
   line-height: 1.3125em;
   margin-top: 1.5em;
+  cursor: pointer;
 }
 
 .toggle-green {
